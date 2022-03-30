@@ -1,0 +1,50 @@
+﻿<Window x:Class="CalculatorVSimple.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorVSimple"
+        mc:Ignorable="d"
+        Title="CalculatorVSimple" SizeToContent="WidthAndHeight" FontSize="12" ResizeMode="NoResize" KeyDown="Window_KeyDown">
+    <DockPanel LastChildFill="False">
+        <TextBox x:Name="Result" Height="27" DockPanel.Dock="Top" FontSize="12" BorderBrush="Black" IsReadOnly="True" MaxLength="10"/>
+        <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+            <GroupBox FontSize="12">
+                <DockPanel LastChildFill="False">
+                    <DockPanel DockPanel.Dock="Left">
+                        <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                            <Button x:Name="_1" Content="1" Width="40" Margin="3" Click="_1_Click" Focusable="False"/>
+                            <Button x:Name="_2" Content="2" Width="40" Margin="3" Click="_2_Click" Focusable="False"/>
+                            <Button x:Name="_3" Content="3" Width="40" Margin="3" Click="_3_Click" Focusable="False"/>
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                            <Button x:Name="_4" Content="4" Width="40" Margin="3" Click="_4_Click" Focusable="False"/>
+                            <Button x:Name="_5" Content="5" Width="40" Margin="3" Click="_5_Click" Focusable="False"/>
+                            <Button x:Name="_6" Content="6" Width="40" Margin="3" Click="_6_Click" Focusable="False"/>
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                            <Button x:Name="_7" Content="7" Width="40" Margin="3" Click="_7_Click" Focusable="False"/>
+                            <Button x:Name="_8" Content="8" Width="40" Margin="3" Click="_8_Click" Focusable="False"/>
+                            <Button x:Name="_9" Content="9" Width="40" Margin="3" Click="_9_Click" Focusable="False"/>
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Top">
+                            <Button x:Name="_0" Content="0" Width="86" Margin="3" Click="_0_Click" Focusable="False"/>
+                            <Button x:Name="Point" Content="." Width="40" Margin="3" Focusable="False" Click="Point_Click"/>
+                        </DockPanel>
+                    </DockPanel>
+                    <DockPanel>
+                        <Button x:Name="Multiple" Content="x" Width="40" Margin="3" DockPanel.Dock="Top" Click="Multiple_Click" Focusable="False"/>
+                        <Button x:Name="Divide" Content="/" Width="40" Margin="3" DockPanel.Dock="Top" Click="Divide_Click" Focusable="False"/>
+                        <Button x:Name="Plus" Content="+" Width="40" Margin="3" DockPanel.Dock="Top" Click="Plus_Click" Focusable="False"/>
+                        <Button x:Name="Minus" Content="-" Width="40" Margin="3" DockPanel.Dock="Top" Click="Minus_Click" Focusable="False"/>
+                    </DockPanel>
+                    <DockPanel>
+                        <Button x:Name="Backspace" Content="-]" Width="40" Margin="3" DockPanel.Dock="Top" Click="Backspace_Click" Focusable="False"/>
+                        <Button x:Name="Clear" Content="C" Width="40" Margin="3" DockPanel.Dock="Top" Click="Clear_Click" Focusable="False"/>
+                        <Button x:Name="Equal" Content="=" Width="40" Margin="3" DockPanel.Dock="Top" Click="Equal_Click" Focusable="False"/>
+                    </DockPanel>
+                </DockPanel>
+            </GroupBox>
+        </DockPanel>
+    </DockPanel>
+</Window>
