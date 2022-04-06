@@ -153,8 +153,9 @@ namespace CalculatorVSimple
                         break;
                     }
                 }
-                double a = Convert.ToDouble(Result.Text.Substring(0, i));                
-                double b = Convert.ToDouble(Result.Text.Remove(0, i));
+                string timeVal = Result.Text.Substring(0, i);
+                double a = Convert.ToDouble(timeVal);                
+                double b = Convert.ToDouble(Result.Text.Remove(0, i + 1));
                 if (action == "+")
                 {
                     Result.Text = (a + b).ToString();
